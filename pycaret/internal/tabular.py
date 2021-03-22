@@ -7174,6 +7174,8 @@ def plot_model(
             )
             my_range = range(1, len(sorted_df.index) + 1)
             display.move_progress()
+            #add by milize-ycyu for supporting the japanese font
+            plt.rcParams['font.family'] = 'IPAexGothic'
             plt.figure(figsize=(8, 5 * (n // 10)), dpi=_base_dpi * scale)
             plt.hlines(y=my_range, xmin=0, xmax=sorted_df["Value"], color="skyblue")
             plt.plot(sorted_df["Value"], my_range, "o")
